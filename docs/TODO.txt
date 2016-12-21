@@ -1,0 +1,6 @@
+ToDo
+====
+
+- Add client registration
+- Add authentication and authorization
+- Add encryption
