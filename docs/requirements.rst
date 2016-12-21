@@ -57,30 +57,30 @@ Slave/Client Requirements
 * Each client will have several threads/processes running, with a
     minimum of the following:-
 
-1. 1st thread/process will write data in "chunks" to a file on
-   the filesystem.
+  1. 1st thread/process will write data in "chunks" to a file on
+     the filesystem.
 
-  * The "chunk" size should be configurable but some reasonable
-    minimum like 10MB.
+    * The "chunk" size should be configurable but some reasonable
+      minimum like 10MB.
 
-  * Each client should start with a different "chunk" size.
+    * Each client should start with a different "chunk" size.
 
-  * When the data file gets to a configurable size, rollover the
-    data file, IE: stop writing, save file, start writing to a new file.
+    * When the data file gets to a configurable size, rollover the
+      data file, IE: stop writing, save file, start writing to a new file.
 
-  * The client should complain on startup if the run time
-    configured and the "chunk" size configured do not allow you to
-    rollover a minimum of 2 times.
+    * The client should complain on startup if the run time
+      configured and the "chunk" size configured do not allow you to
+      rollover a minimum of 2 times.
 
-  * A message should be logged to the client and a message should
-    be sent to the server when a data file rolls over.
+    * A message should be logged to the client and a message should
+      be sent to the server when a data file rolls over.
 
-2. 2nd thread/process is to report CPU & memory information on
-   the "data" thread/process to the server at approximately 10 second
-   intervals.
+  2. 2nd thread/process is to report CPU & memory information on
+     the "data" thread/process to the server at approximately 10 second
+     intervals.
 
-3. 3rd thread/process will report a "heartbeat" status to the
-   server at approximately 5 second intervals.
+  3. 3rd thread/process will report a "heartbeat" status to the
+     server at approximately 5 second intervals.
 
 
 
