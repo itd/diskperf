@@ -27,6 +27,7 @@ import SocketServer
 
 from globals import (HOME_IP, HOME_PORT)
 
+
 class ThreadedTCPRequestHandler(SocketServer.BaseRequestHandler):
     def handle(self):
         data = self.request.recv(1024)
@@ -39,9 +40,9 @@ class ThreadedTCPServer(SocketServer.ThreadingMixIn, SocketServer.TCPServer):
     pass
 
 
-def client(ip, port, message):
+def client(server_ip, server_port, message):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    sock.connect((ip, port))
+    sock.connect((server_ip, server_port))
     try:
         sock.sendall(message)
         response = sock.recv(1024)
@@ -65,4 +66,3 @@ if __name__ == "__main__":
     server_thread.daemon = True
     server_thread.start()
     print "Server loop running in thread:", server_thread.name
-

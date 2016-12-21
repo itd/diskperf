@@ -26,7 +26,7 @@ def client(ip, port, message):
         sock.close()
 
 if __name__ == "__main__":
-    # ~ around 5 seconds
+    # ~ around 5 seconds. Add some randomness.
     heartbeat_interval = random.random() + HEARTBEAT - 0.5
 
     client(HOME_IP, HOME_PORT, "HEARTBEAT:")
