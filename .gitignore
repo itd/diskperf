@@ -1,0 +1,97 @@
+# Byte-compiled / optimized / DLL files
+#######################################
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.py.swp
+
+*.so
+
+# build. log, test
+#####################
+.tox
+dist/
+build/
+mock*/
+nose*/
+.pybuild/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+.env
+*~
+*.old
+*.swp
+*.log
+
+.env
+
+.project
+.pydevproject
+.settings
+.vagrant
+
+
+*.egg
+*.egg-info
+
+# apps and dcvs
+###############################
+.svn
+.bzr
+.hgsvn
+*.komodoproject
+.hg
+.idea/
+
+#build and log files
+###############################
+*.o
+*.pyc
+*.pyo
+*.out
+*.log
+*.tmp
+
+#Apple / Mac stuff
+###############################
+.DS_Store
+._*
+.Trash
+
+#crazy files
+###############################
+META
+build/
+tmp/
+junk
+trash
+
+#  Binary stuff I don't want
+#  in a repo.
+###############################
+*.exe
+*.zip
+*.tgz
+*.tar
+*.bzip
+*.tbz
+*.gz
+*.bin
+*.zexp
+
+# obvious backup files
+###############################
+*.orig
+*.bak
+*~
+~*
+
+#database files
+###############################
+*.db
+Data.f*
+
